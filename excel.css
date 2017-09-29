@@ -1,0 +1,59 @@
+.container{
+   margin: auto;
+   padding-left: 83px;
+   padding-right: 133px;
+   width:600px;
+}
+.contact-form-button{
+
+  color: blue;
+  text-decoration-color: #eee;
+  text-align: center;
+}
+.text{
+  padding-left: 36px;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.contact{
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+
+}
+.list{
+  padding-bottom: 20px;
+}
+.results__heading{
+  padding-left: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+.box{
+  background-color: grey;
+  width: inherit;
+  height:200px;
+}
+@media only screen and (max-width: 500px){
+  .container{
+    width:85%;
+    padding: 0px;
+  }
+  .text{
+    width:100%;
+    font-size: 12px;
+    padding: 1%;
+    margin: 1%;
+
+  }
+  .form{
+    width:500px;
+  }
+  .input{
+    width:85%;
+  }
+
+
+}
