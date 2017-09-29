@@ -1,0 +1,125 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="excel.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <h1 class="heading">CONTACT FORM</h2>
+</head>
+<style>
+.flex-wrapper{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.flex-wrapper > div {
+    flex: 1 1 auto;
+}
+
+input {
+    width: 100%;
+    padding: 4px;
+    border-color: blue;
+
+}
+.heading{
+  text-align: center;
+  color: blue;
+  font-family: sans-serif;
+}
+</style>
+<script>
+function f(k)
+ {
+ return(document.forms["form"][k].value);
+}
+
+function Function() {
+
+ var obj = {"firstname":f("firstname"),
+         "lastname":f("lastname"),
+         "Address":f("address"),
+         "Age":f("Age"),
+         "College":f("clgname"),
+         "Branch":f("branch"),
+         "Semester":f("sem"),
+         "Class":f("class"),
+         "CGPA:":f("cgpa"),
+         "Email":f("email")
+
+        };
+ var myJSON = JSON.stringify(obj);
+ document.getElementById("json").innerHTML = myJSON;
+ document.getElementById("id").innerHTML = "scroll up";
+ return false;
+}
+</script>
+<body>
+  <div class="container">
+  <p class="text">Give the following details:</p>
+
+  <form name="form" onsubmit="return Function()">
+    <div class="flex-wrapper">
+    <div class="form">
+      <ul>
+        <li class="list">
+        <label class="contact" for="firstname">First Name: </label>
+        <input class="contact-input" id="firstname" type="text" name="firstname" placeholder="Firstname here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="lastname">Last Name: </label>
+        <input class="contact-input" id="lastname" type="text" name="lastname" placeholder="Lastname here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="address">Address: </label>
+        <input class="contact-input" id="address" type="text" name="address" placeholder="Your address here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="clgname">College Name: </label>
+        <input class="contact-input" id="clgname" type="text" name="clgname" placeholder="Your College Name here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="branch">Branch: </label>
+        <input class="contact-input" id="branch" type="text" name="branch" placeholder="Your Branch here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="sem">Semester: </label>
+        <input class="contact-input" id="sem" type="number" name="sem" placeholder="Your current semester here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="class">Class: </label>
+        <input class="contact-input" id="class" type="text" name="class" placeholder="Your division(A/B) here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="cgpa">CGPA: </label>
+        <input class="contact-input" id="cgpa" type="number" name="cgpa" placeholder="Your cgpa here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="email">Email id: </label>
+        <input class="contact-input" id="email" type="email" name="email" placeholder="Your email id here"/>
+      </li>
+      <li class="list">
+        <label class="contact" for="contactno">Contact No: </label>
+        <input class="contact-input" id="contactno" type="text" name="contactno" placeholder="Your mob no here"/>
+      </li>
+    </ul>
+    <div class="button" style="text-align:center">
+    <button type="submit" class="contact-form-button">SUBMIT</button>
+    <!--<input type="submit" value="Submit">-->
+  </div>
+
+</div>
+</div>
+<div class="results">
+  <h2 class="results__heading">Form Data</h2>
+  <div class="box">
+
+  <p id="json"></p>
+</div>
+</div>
+
+
+</div>
+</form>
+</body>
+</html>
